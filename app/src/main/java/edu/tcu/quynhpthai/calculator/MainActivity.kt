@@ -7,15 +7,17 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Stack
 
+
 class MainActivity : AppCompatActivity() {
-    private var resultTv: TextView? = null
-    private val currentInput = StringBuilder() // Holds the current input
+
+    private lateinit var resultTv: TextView
+    private val currentInput = StringBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        resultTv = findViewById(R.id.result_tv) // TextView to display result
+        resultTv = findViewById(R.id.result_tv)
     }
 
     // Method to handle digit button clicks
@@ -23,12 +25,9 @@ class MainActivity : AppCompatActivity() {
         val clickedButton = view as Button
         val digit = clickedButton.text.toString()
 
-        if (digit == "." && currentInput.toString().contains(".")) {
-            return  // Prevent multiple dots in a single number
-        }
-
+        // Append the digit to the current input
         currentInput.append(digit)
-        resultTv!!.text = currentInput.toString()
+        resultTv.text = currentInput.toString()
     }
 
     // Method to handle operator button clicks
@@ -36,23 +35,22 @@ class MainActivity : AppCompatActivity() {
         val clickedButton = view as Button
         val operator = clickedButton.text.toString()
 
-        // Ensure operator is valid
-        if (currentInput.length > 0) {
-            val lastChar = currentInput[currentInput.length - 1]
-            if (lastChar != '+' && lastChar != '-' && lastChar != '*' && lastChar != '/') {
-                currentInput.append(operator)
-                resultTv!!.text = currentInput.toString()
-            }
-        }
+        // Append the operator to the current input
+        currentInput.append(operator)
+        resultTv.text = currentInput.toString()
     }
 
-    // Method to clear input
-    fun onClearClick(view: View?) {
-        currentInput.setLength(0) // Clear input
-        resultTv!!.text = "0" // Reset display
+    // Method to handle clear button click
+    fun onClearClick(view: View) {
+        currentInput.clear()
+        resultTv.text = "0"
     }
 
-    // Method to handle the equals button
+    // Method to handle the equal button click
+//    fun onEqualClick(view: View) {
+//        // You can implement an expression parser to calculate the result
+//        resultTv.text = currentInput.toString() // Placeholder for now
+//    }
     fun onEqualClick(view: View?) {
         try {
             // Step 1: Convert to postfix
@@ -61,10 +59,10 @@ class MainActivity : AppCompatActivity() {
             // Step 2: Evaluate postfix expression
             val result = evaluatePostfix(postfix)
 
-            resultTv!!.text = result.toString() // Display the result
+            resultTv.text = result.toString() // Display the result
             currentInput.setLength(0) // Clear current input
         } catch (e: Exception) {
-            resultTv!!.text = "Error" // Handle errors in expression
+            resultTv.text = "Error" // Handle errors in expression
         }
     }
 
@@ -85,8 +83,8 @@ class MainActivity : AppCompatActivity() {
     // Convert infix expression to postfix expression (Shunting Yard Algorithm)
     private fun infixToPostfix(expression: String): String {
         val stack = Stack<Char>()
-        val postfix = StringBuilder()
-        val numberBuffer = StringBuilder()
+        val postfix = java.lang.StringBuilder()
+        val numberBuffer = java.lang.StringBuilder()
 
         for (i in 0 until expression.length) {
             val ch = expression[i]
