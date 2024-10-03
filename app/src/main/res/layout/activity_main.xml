@@ -20,32 +20,32 @@
         android:textSize="48sp" />
 
     <LinearLayout
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/clear_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
             android:text="@string/clear_symbol"
             android:onClick="onClearClick"
             tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/equal_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="89dp"
+            android:paddingEnd="89dp"
             android:text="@string/equal_symbol"
             android:onClick="onEqualClick"
             tools:ignore="ButtonStyle" />
@@ -58,32 +58,35 @@
         However, this will cause the "button is too wide" issue.
     -->
     <LinearLayout
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/seven_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+
             android:text="@string/digit_seven"
             android:onClick="onDigitClick"
             tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/eight_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+
             android:text="@string/digit_eight"
             android:onClick="onDigitClick"
 
@@ -91,12 +94,13 @@
 
         <Button
             android:id="@+id/nine_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_nine"
             android:onClick="onDigitClick"
 
@@ -104,12 +108,13 @@
 
         <Button
             android:id="@+id/divide_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/divide_symbol"
             android:onClick="onOperatorClick"
 
@@ -117,20 +122,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/four_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_four"
             android:onClick="onDigitClick"
 
@@ -138,12 +143,13 @@
 
         <Button
             android:id="@+id/five_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_five"
             android:onClick="onDigitClick"
 
@@ -151,12 +157,13 @@
 
         <Button
             android:id="@+id/six_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_six"
             android:onClick="onDigitClick"
 
@@ -164,12 +171,13 @@
 
         <Button
             android:id="@+id/multiply_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/multiply_symbol"
             android:onClick="onOperatorClick"
 
@@ -177,20 +185,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/one_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_one"
             android:onClick="onDigitClick"
 
@@ -198,12 +206,13 @@
 
         <Button
             android:id="@+id/two_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_two"
             android:onClick="onDigitClick"
 
@@ -211,12 +220,13 @@
 
         <Button
             android:id="@+id/three_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/digit_three"
             android:onClick="onDigitClick"
 
@@ -224,12 +234,13 @@
 
         <Button
             android:id="@+id/subtract_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/subtract_symbol"
             android:onClick="onOperatorClick"
 
@@ -237,20 +248,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="411dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1">
 
         <Button
             android:id="@+id/zero_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="2"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="89dp"
+            android:paddingEnd="89dp"
             android:text="@string/digit_zero"
             android:onClick="onDigitClick"
 
@@ -258,12 +269,13 @@
 
         <Button
             android:id="@+id/dot_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/dot_symbol"
             android:onClick="onDigitClick"
 
@@ -271,12 +283,13 @@
 
         <Button
             android:id="@+id/add_btn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
             android:paddingTop="30dp"
             android:paddingBottom="30dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:text="@string/add_symbol"
             android:onClick="onOperatorClick"
 
